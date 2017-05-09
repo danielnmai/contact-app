@@ -1,0 +1,6 @@
+<h1>Contact successfully updated.</h1>
+  <h2>First Name: <%=@contact.first_name%></h2>
+  <h2>Last Name: <%=@contact.last_name%></h2>
+  <h2>email: <%=@contact.email%></h2>
+  <h2>Phone: <%=@contact.phone_number%></h2>
+<h2>  <%= button_to "Delete Contact", {:action => "destroy", :id => @contact.id }, :method => :delete, data: {confirm: "Are you sure?"} %></h2>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Contacts</title>
+</head>
+<body>
+  <h1>All Contacts  </h1>
+  <h2> <%= button_to "Create Contact", {:action => "new"}, :method => :get %></h2>
+  <% @contacts.each do |contact| %>
+  <p>--------------------------</p>
+   <h2>Contact ID: <%= contact.id%></h2>
+ <h2>First Name:  <a href="/contacts/<%= contact.id %>"> <%= contact.first_name %></a>
+  <h2>Last Name: <%= contact.last_name%></h2>
+  <h2>Email: <%= contact.email%></h2>
+  <h2>Phone: <%= contact.phone_number%></h2>
+  <%= button_to "Edit Contact", {:action => "edit", :id => contact.id }, :method => :get %>
+
+    <% end %>
+
+   
+ 
+</body>
+</html>

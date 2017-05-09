@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+</head>
+<body>
+<h1>Contact Info </h1>
+  <h1>First Name: <%=@contact.first_name%></h1>
+  <h1>Last Name: <%=@contact.last_name%></h1>
+  <h1>email: <%=@contact.email%></h1>
+  <h1>Phone: <%=@contact.phone_number%></h1>
+  
+  <%= button_to "Delete Contact", {:action => "destroy", :id => @contact.id }, :method => :delete, data: {confirm: "Are you sure?"} %>
+
+</body>
+</html>
